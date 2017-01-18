@@ -1,0 +1,12 @@
+diff --git a/weblogolib/__init__.py b/weblogolib/__init__.py
+index 07f78e9..efb6229 100755
+--- a/weblogolib/__init__.py
++++ b/weblogolib/__init__.py
+@@ -207,6 +207,7 @@ class GhostscriptAPI(object) :
+             "-dPDFSETTINGS=/printer",
+             #"-q",   # Quite: Do not dump messages to stdout.
+             "-sstdout=%stderr", # Redirect messages and errors to stderr
++            "-dColorConversionStrategy=/LeaveColorUnchanged",
+             "-sOutputFile=-", # Stdout
+             "-dDEVICEWIDTHPOINTS=%s" % str(width),  
+             "-dDEVICEHEIGHTPOINTS=%s" % str(height),  
