@@ -48,11 +48,11 @@ RUN tar xzf weblogo-3.2.1.tar.gz\
 	&& pip install /tmp/weblogo-3.2.1\
 	&& cd .. && rm -rf weblogo-3.2.1.tar.gz weblogo-3.2.1 weblogo-gs910.patch
 
-RUN tar xjf GraphProt-1.1.3.tar.bz2\
-	&& sed -i 's/-static//g' GraphProt-1.1.3/EDeN/Makefile\
-	&& make -C GraphProt-1.1.3/EDeN
+RUN tar xjf GraphProt-1.1.4.tar.bz2\
+	&& sed -i 's/-static//g' GraphProt-1.1.4/EDeN/Makefile\
+	&& make -C GraphProt-1.1.4/EDeN
 
 RUN mkdir -p /data
 
 WORKDIR /data
-ENTRYPOINT [ "perl", "/tmp/GraphProt-1.1.3/GraphProt.pl"]
+ENTRYPOINT [ "perl", "/tmp/GraphProt-1.1.4/GraphProt.pl"]
