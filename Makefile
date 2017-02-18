@@ -3,7 +3,7 @@
 all: download docker
 
 docker:
-	docker build -t graphprot -t graphprot:1.1.3 .
+	docker build -t croth/graphprot -t croth/graphprot:1.1.3 .
 
 download:
 	wget -P data http://osmot.cs.cornell.edu/kddcup/perf/perf.src.tar.gz
